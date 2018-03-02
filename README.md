@@ -18,7 +18,7 @@ go get gitlab.kazan.priv.atos.fr/A643410/mr-summarizer
 
 **Create a new configuration file**
 config.yml
-```
+```yml
 mattermost:
   webhook: https://mattermost.com/hooks/sfdsqsdf3q88gj83bs7
   channel: my-channel
