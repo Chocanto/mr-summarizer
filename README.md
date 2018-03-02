@@ -13,7 +13,7 @@ Usage
 
 **Get and build**
 ```
-go get https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer
+go get gitlab.kazan.priv.atos.fr/A643410/mr-summarizer
 ```
 
 **Create a new configuration file**
