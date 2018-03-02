@@ -37,3 +37,13 @@ title: MRs FOR APPROVAL
 ```
 mr-summarizer config.yml
 ```
+
+Output example
+--------------
+
+
+### MERGE REQUESTS À VALIDER - 02/03/18
+|                                                  PROJET                                                   |                                                                    TITRE                                   |    DEPUIS    | :+1: |           ASSIGNÉ À        |
+|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|--------------|------|----------------------------|
+| [MR Summarizer](https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer)                                  | [Replace all bugs with features](https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer/merge_requests/1) | 8J :warning: |    1 | DUPOND MARC (@dupond.marc) |
+| [Cool project](https://gitlab.kazan.priv.atos.fr/A643410/cool-project)                                    | [New name for this cool project](https://gitlab.kazan.priv.atos.fr/A643410/cool-project/merge_requests/9)  | 1J           |    0 | Anthony Granger (@A643410) |
