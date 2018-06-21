@@ -48,9 +48,12 @@ func gatherMRs() string {
 		}
 	}
 
-	table.Render()
-
-	return buf.String()
+	if table.NumLines() > 0 {
+		table.Render()
+		return buf.String()
+	} else {
+		return ":tada: Félicitation :tada:\n\nAucunes merge requests à valider aujourd'hui :parrot:"
+	}
 }
 
 func getTable(writer io.Writer) *tablewriter.Table {
