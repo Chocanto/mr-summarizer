@@ -52,7 +52,7 @@ func gatherMRs() string {
 		table.Render()
 		return buf.String()
 	} else {
-		return ":tada: Félicitation :tada:\n\nAucunes merge requests à valider aujourd'hui :parrot:"
+		return ":tada: Félicitations :tada:   Aucune merge request à valider aujourd'hui :parrot:"
 	}
 }
 
