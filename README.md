@@ -38,6 +38,55 @@ title: MRs FOR APPROVAL
 mr-summarizer config.yml
 ```
 
+Configuration
+-------------
+
+### Mattermost configuration
+
+| Parameter | Type   | Description                                 | Example                                          |
+|-----------|--------|---------------------------------------------|--------------------------------------------------|
+| webhook   | string | Webhook url for this bot                    | https://mattermost.com/hooks/sfdsqsdf3q88gj83bs7 |
+| channel   | string | Channel name where to send messages         | my-cool-channel                                  |
+| username  | string | Username of the bot (used on sent messages) | MR Summarizer                                    |
+
+Example :
+```
+mattermost:
+  webhook: https://mattermost.com/hooks/sfdsqsdf3q88gj83bs7
+  channel: my-channel
+  username: MR Summarizer
+```
+
+
+### Gitlab configuration
+
+| Parameter | Type   | Description                                              | Example                   |
+|-----------|--------|----------------------------------------------------------|---------------------------|
+| url       | string | API endpoint of Gitlab instance                          | https://gitlab.com/api/v4 |
+| token     | string | Private token used for Gitlab API Authentication         | DFsd5fsF8C1df1            |
+| group     | string | Name of the group that will be scanned for merge request | my-group                  |
+
+Example :
+```
+gitlab:
+  url: https://gitlab.com/api/v4
+  token: DFsd5fsF8C1df1
+  group: my-group
+```
+
+### Other configuration
+
+| Parameter | Type   | Description                                                  | Example          |
+|-----------|--------|--------------------------------------------------------------|------------------|
+| threshold | number | Number of days before the merge request is marked as warning | 7                |
+| title     | string | Title of the sent message                                    | MRs FOR APPROVAL |
+
+Example :
+```
+threshold: 7
+title: MRs FOR APPROVAL
+```
+
 Output example
 --------------
 
