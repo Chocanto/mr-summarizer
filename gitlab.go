@@ -75,7 +75,13 @@ func formatLine(MR *gitlab.MergeRequest, project *gitlab.Project) []string {
 
 	projectName := fmt.Sprintf("[%.30s](%s)", project.Name, project.WebURL)
 	title := fmt.Sprintf("[%.50s](%s)", MR.Title, MR.WebURL)
-	assignee := fmt.Sprintf("%s (@%s)", MR.Assignee.Name, MR.Assignee.Username)
+	var assignee string
+
+	if MR.Assignee.ID != 0 {
+		assignee = fmt.Sprintf("%s (@%s)", MR.Assignee.Name, MR.Assignee.Username)
+	} else {
+		assignee = "Personne... :sad:"
+	}
 
 	return []string{
 		projectName, title, daysS, strconv.Itoa(MR.Upvotes), assignee,
