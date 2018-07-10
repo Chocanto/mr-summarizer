@@ -67,10 +67,17 @@ func getTable(writer io.Writer) *tablewriter.Table {
 }
 
 func formatLine(MR *gitlab.MergeRequest, project *gitlab.Project) []string {
-	days := int(time.Now().Sub(*MR.CreatedAt).Hours() / 24)
-	daysS := strconv.Itoa(days) + "J"
-	if days >= Config.Threshold {
-		daysS = daysS + " :warning:"
+	var daysS string
+	diffHours := int(time.Now().Sub(*MR.CreatedAt).Hours())
+
+	if diffHours < 24 {
+		daysS = fmt.Sprintf("%dH", diffHours)
+	} else {
+		diffDays := int(diffHours/24)
+		daysS = fmt.Sprintf("%dJ", diffDays)
+		if diffDays >= Config.Threshold {
+			daysS = daysS + " :warning:"
+		}
 	}
 
 	projectName := fmt.Sprintf("[%.30s](%s)", project.Name, project.WebURL)
