@@ -30,7 +30,7 @@ gitlab:
   group: my-group
 
 threshold: 7
-title: MRs FOR APPROVAL
+language: en-US
 ```
 
 **Run**
