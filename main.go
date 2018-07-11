@@ -22,4 +22,3 @@ func main() {
 	table := gatherMRs()
 	sendToMattermost(table)
 }
-

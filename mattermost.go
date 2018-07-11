@@ -2,11 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	"strings"
-	"net/http"
-	"time"
 	"fmt"
 	"log"
+	"net/http"
+	"strings"
+	"time"
 )
 
 type Message struct {
