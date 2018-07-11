@@ -52,13 +52,19 @@ func gatherMRs() string {
 		table.Render()
 		return buf.String()
 	} else {
-		return ":tada: Félicitations :tada:   Aucune merge request à valider aujourd'hui :parrot:"
+		return Printer.Sprintf(":tada: Congratulation :tada:   No merge request to validate today :parrot:")
 	}
 }
 
 func getTable(writer io.Writer) *tablewriter.Table {
 	table := tablewriter.NewWriter(writer)
-	table.SetHeader([]string{"Projet", "Titre", "Depuis", ":+1:", "Assigné à"})
+	table.SetHeader([]string{
+		Printer.Sprintf("Project"),
+		Printer.Sprintf("Title"),
+		Printer.Sprintf("Since"),
+		":+1:",
+		Printer.Sprintf("Assigned"),
+	})
 	table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
 	table.SetCenterSeparator("|")
 	table.SetAutoWrapText(false)
@@ -71,10 +77,10 @@ func formatLine(MR *gitlab.MergeRequest, project *gitlab.Project) []string {
 	diffHours := int(time.Now().Sub(*MR.CreatedAt).Hours())
 
 	if diffHours < 24 {
-		daysS = fmt.Sprintf("%dH", diffHours)
+		daysS = Printer.Sprintf("%dH", diffHours)
 	} else {
-		diffDays := int(diffHours/24)
-		daysS = fmt.Sprintf("%dJ", diffDays)
+		diffDays := int(diffHours / 24)
+		daysS = Printer.Sprintf("%dD", diffDays)
 		if diffDays >= Config.Threshold {
 			daysS = daysS + " :warning:"
 		}
@@ -87,7 +93,7 @@ func formatLine(MR *gitlab.MergeRequest, project *gitlab.Project) []string {
 	if MR.Assignee.ID != 0 {
 		assignee = fmt.Sprintf("%s (@%s)", MR.Assignee.Name, MR.Assignee.Username)
 	} else {
-		assignee = "Personne... :sad:"
+		assignee = Printer.Sprintf("Nobody... :sad:")
 	}
 
 	return []string{

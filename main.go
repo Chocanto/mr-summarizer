@@ -5,6 +5,8 @@ import (
 	"os"
 )
 
+//go:generate gotext -srclang=en update -out=catalog_gen.go -lang=en,fr
+
 func main() {
 	configPath := "config.yml"
 	if len(os.Args) > 1 {
@@ -16,6 +18,7 @@ func main() {
 		log.Fatalln(err.Error())
 	}
 
+	initPrinter(Config.Language)
 	table := gatherMRs()
 	sendToMattermost(table)
 }

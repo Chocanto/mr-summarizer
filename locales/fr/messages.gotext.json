@@ -1,0 +1,70 @@
+{
+    "language": "fr",
+    "messages": [
+        {
+            "id": ":tada: Congratulation :tada:   No merge request to validate today :parrot:",
+            "message": ":tada: Congratulation :tada:   No merge request to validate today :parrot:",
+            "translation": ":tada: Félicitations :tada:   Aucune merge request à valider aujourd'hui :parrot:"
+        },
+        {
+          "id": "Project",
+          "message": "Project",
+          "translation": "Projet"
+        },
+        {
+          "id": "Title",
+          "message": "Title",
+          "translation": "Titre"
+        },
+        {
+          "id": "Since",
+          "message": "Since",
+          "translation": "Depuis"
+        },
+        {
+          "id": "Assigned",
+          "message": "Assigned",
+          "translation": "Assigné à"
+        },
+        {
+          "id": "{DiffHours}H",
+          "message": "{DiffHours}H",
+          "translation": "{DiffHours}H",
+          "placeholders": [
+            {
+              "id": "DiffHours",
+              "string": "%[1]d",
+              "type": "int",
+              "underlyingType": "int",
+              "argNum": 1,
+              "expr": "diffHours"
+            }
+          ]
+        },
+        {
+          "id": "{DiffDays}D",
+          "message": "{DiffDays}D",
+          "translation": "{DiffDays}J",
+          "placeholders": [
+            {
+              "id": "DiffDays",
+              "string": "%[1]d",
+              "type": "int",
+              "underlyingType": "int",
+              "argNum": 1,
+              "expr": "diffDays"
+            }
+          ]
+        },
+        {
+          "id": "Nobody... :sad:",
+          "message": "Nobody... :sad:",
+          "translation": "Personne... :sad:"
+        },
+        {
+          "id": "MERGE REQUESTS WAITING FOR APPROVAL",
+          "message": "MERGE REQUESTS WAITING FOR APPROVAL",
+          "translation": "MERGE REQUESTS À VALIDER"
+        }
+    ]
+}

@@ -79,20 +79,20 @@ gitlab:
 | Parameter | Type   | Description                                                  | Example          |
 |-----------|--------|--------------------------------------------------------------|------------------|
 | threshold | number | Number of days before the merge request is marked as warning | 7                |
-| title     | string | Title of the sent message                                    | MRs FOR APPROVAL |
+| language  | string | BCP 47 tag language for translation and localization         | en-US            |
 
 Example :
 ```
 threshold: 7
-title: MRs FOR APPROVAL
+language: en-US
 ```
 
 Output example
 --------------
 
 
-### MERGE REQUESTS À VALIDER - 02/03/18
-|                                                  PROJET                                                   |                                                                    TITRE                                   |    DEPUIS    | :+1: |           ASSIGNÉ À        |
+### MERGE REQUESTS WAITING FOR APPROVAL - 02/03/18
+|                                                  PROJECT                                                   |                                                                    TITLE                                  |    SINCE     | :+1: |           ASSIGNED         |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|--------------|------|----------------------------|
-| [MR Summarizer](https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer)                                  | [Replace all bugs with features](https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer/merge_requests/1) | 8J :warning: |    1 | DUPOND MARC (@dupond.marc) |
-| [Cool project](https://gitlab.kazan.priv.atos.fr/A643410/cool-project)                                    | [New name for this cool project](https://gitlab.kazan.priv.atos.fr/A643410/cool-project/merge_requests/9)  | 1J           |    0 | Anthony Granger (@A643410) |
+| [MR Summarizer](https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer)                                  | [Replace all bugs with features](https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer/merge_requests/1) | 8D :warning: |    1 | DUPOND MARC (@dupond.marc) |
+| [Cool project](https://gitlab.kazan.priv.atos.fr/A643410/cool-project)                                    | [New name for this cool project](https://gitlab.kazan.priv.atos.fr/A643410/cool-project/merge_requests/9)  | 1D           |    0 | Anthony Granger (@A643410) |

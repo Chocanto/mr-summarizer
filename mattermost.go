@@ -19,7 +19,7 @@ func sendToMattermost(message string) {
 	data := Message{
 		Username: Config.Mattermost.Username,
 		Channel:  Config.Mattermost.Channel,
-		Text:     fmt.Sprintf("### %s - %s\n%s", Config.Title, time.Now().Format("02/01/06"), message),
+		Text:     fmt.Sprintf("### %s - %s\n%s", Printer.Sprintf("MERGE REQUESTS WAITING FOR APPROVAL"), time.Now().Format("02/01/06"), message),
 	}
 
 	messageJSON, _ := json.Marshal(data)

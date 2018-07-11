@@ -18,6 +18,7 @@ var Config = struct {
 
 	Threshold int    `default:"7"`
 	Title     string `default:"MERGE REQUESTS WAITING FOR APPROVAL"`
+	Language  string `default:"en-US"`
 }{}
 
 func loadConfig(filepath string) error {
