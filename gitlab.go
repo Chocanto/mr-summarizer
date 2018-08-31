@@ -28,7 +28,6 @@ func gatherMRs() string {
 	for i := range projects {
 		opts := &gitlab.ListProjectMergeRequestsOptions{
 			State: gitlab.String("opened"),
-			View:  gitlab.String("simple"),
 		}
 		MRs, _, err := git.MergeRequests.ListProjectMergeRequests(projects[i].ID, opts)
 		if err != nil {
