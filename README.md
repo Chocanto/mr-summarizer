@@ -8,12 +8,16 @@ Usage
 ------------
 
 **Requirements** :
-- Go toolchain
-- `$GOPATH/bin` in $PATH
+- [Go toolchain](https://golang.org/doc/install)
+- Go Dep : `go get -u github.com/golang/dep/cmd/dep`
+- `$GOPATH/bin` in $PATH (to run mr-summarizer without giving full path)
 
 **Get and build**
 ```
-go get gitlab.kazan.priv.atos.fr/A643410/mr-summarizer
+git clone https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer
+cd $GOPATH/src/gitlab.kazan.priv.atos.fr/A643410/mr-summarizer
+dep ensure
+go install
 ```
 
 **Create a new configuration file**
