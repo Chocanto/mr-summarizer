@@ -14,8 +14,8 @@ Usage
 
 **Get and build**
 ```
-git clone https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer
-cd $GOPATH/src/gitlab.kazan.priv.atos.fr/A643410/mr-summarizer
+git clone https://github.com/Chocanto/mr-summarizer
+cd $GOPATH/src/github.com/Chocanto/mr-summarizer
 dep ensure
 go install
 ```
@@ -98,5 +98,6 @@ Output example
 ### MERGE REQUESTS WAITING FOR APPROVAL - 02/03/18
 |                                                  PROJECT                                                   |                                                                    TITLE                                  |    SINCE     | :+1: |           ASSIGNED         |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|--------------|------|----------------------------|
-| [MR Summarizer](https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer)                                  | [Replace all bugs with features](https://gitlab.kazan.priv.atos.fr/A643410/mr-summarizer/merge_requests/1) | 8D :warning: |    1 | DUPOND MARC (@dupond.marc) |
-| [Cool project](https://gitlab.kazan.priv.atos.fr/A643410/cool-project)                                    | [New name for this cool project](https://gitlab.kazan.priv.atos.fr/A643410/cool-project/merge_requests/9)  | 1D           |    0 | Anthony Granger (@A643410) |
+| [MR Summarizer](https://github.com/Chocanto/mr-summarizer)                                  | [Replace all bugs with features](https://github.com/Chocanto/mr-summarizer/merge_requests/1) | 8D :warning: |    1 | DUPOND MARC (@dupond.marc) |
+| [Cool project](https://github.com/Chocanto/mr-summarizer)                                    | [New name for this cool project](https://github.com/Chocanto/cool-project/merge_requests/9)  | 1D           |    0 | Anthony Granger (@anthony
+) |
